@@ -4,18 +4,12 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/EleyOliveira/api-go-rest/routes"
 )
 
 func main() {
 	fmt.Println("iniciando o servidor")
-	HandleRequest()
-}
-
-func Home(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Home Page")
-}
-
-func HandleRequest() {
-	http.HandleFunc("/", Home)
 	log.Fatal(http.ListenAndServe(":8000", nil))
+	routes.HandleRequest()
 }

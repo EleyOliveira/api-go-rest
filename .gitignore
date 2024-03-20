@@ -1,2 +1,5 @@
 .devcontainer/
+node_modules/
 .github/dependabot.yml
+package-lock.json
+package.json
