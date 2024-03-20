@@ -10,6 +10,6 @@ import (
 
 func main() {
 	fmt.Println("iniciando o servidor")
-	log.Fatal(http.ListenAndServe(":8000", nil))
 	routes.HandleRequest()
+	log.Fatal(http.ListenAndServe(":8000", nil))
 }
